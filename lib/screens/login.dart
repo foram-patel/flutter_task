@@ -104,7 +104,7 @@ class _LoginState extends State<Login> {
         toast('Incorrect Password');
       }else if(userMatch!=null && userMatch['password']==_passwordController.text){
         await Storage.set('login_user', userMatch);
-        Get.toNamed('dashboard');
+        Get.offAllNamed('dashboard');
       }
 
     }
